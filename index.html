@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+# Re-run after kernel reset: create the downloadable index.html again
+
+html_path = "/mnt/data/index.html"
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,13 +15,13 @@
       color: #333;
       background: linear-gradient(to right, #fdfcfb, #e2d1c3);
       background-size: cover;
-          }
+    }
     header, section, footer {
       padding: 60px 20px;
       text-align: center;
     }
     header {
-      background: #2b5876;  /* Updated to match flyer feel */
+      background: #2b5876;
       color: white;
     }
     h1 {
@@ -109,8 +112,6 @@
   </div>
 </section>
 
-$1
-
 <section>
   <h2>Key Projects & Use Cases</h2>
   <div class="projects">
@@ -126,7 +127,6 @@ $1
       <h3>AI Bootcamp Builder</h3>
       <p>Design structured bootcamp content and teach real-world AI skills to future cohorts.</p>
     </div>
-    
     <div class="card">
       <h3>VPP-enabled Community Energy</h3>
       <p>Aggregated energy management across homes using AI. Enables predictive balancing, community-wide energy savings, and potential grid-level participation.</p>
@@ -134,37 +134,45 @@ $1
   </div>
 </section>
 
-
-
 <section>
   <p>This residency is located close to Silicon Valley companies, making it a golden launchpad for your AI career. Each resident will receive a certificate of experience from Mayuk.ai upon completion.</p>
   <p><strong>Eligibility Notice:</strong> Only U.S. citizens and individuals holding valid U.S. visas (who do not require sponsorship) are eligible to apply for the AI House Residency Program.</p>
 </section>
-  <form action="https://formspree.io/f/xzzeykkk" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Tell us about yourself and why you're interested." required></textarea>
-    <button type="submit" class="btn">Submit Application</button>
-  </form>
-</section>
+
+<form action="https://formspree.io/f/xzzeykkk" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Tell us about yourself and why you're interested." required></textarea>
+  <button type="submit" class="btn">Submit Application</button>
+</form>
 
 <footer>
   <p>&copy; 2025 Mayuk.ai – AI House Residency | Antioch, CA | info@mayukinc.com</p>
 </footer>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68015ea9528b6c19129a9837/1ip2ljhpm';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+<!-- Botpress Chat Widget -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.botpressWebChat) {
+      window.botpressWebChat.init({
+        botId: "bd57d22c-d926-4730-9b80-33548901acc6",
+        clientId: "6a7430ab-23db-4cc5-834d-e82b0df70f81",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        botName: "AI House Assistant",
+        stylesheet: "https://cdn.botpress.cloud/webchat/v1/themes/default.css"
+      });
+    }
+  });
 </script>
-<!--End of Tawk.to Script-->
-  
+<!-- End Botpress Script -->
+
 </body>
 </html>
+"""
+
+with open(html_path, "w") as f:
+    f.write(html_content)
+
+html_path
