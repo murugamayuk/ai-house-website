@@ -111,22 +111,32 @@
 $1
 
 <section>
-  <h2>AI Energy Use Case: Home vs. Community</h2>
-  <p>Explore the application of AI in optimizing energy usage at both the individual and community level. Residents will analyze real-world models comparing standalone home energy systems with Virtual Power Plant (VPP)-enabled communities. Learn how AI can increase efficiency, enable smart grid decisions, and reduce costs through shared infrastructure and data-driven insights.</p>
+  <h2>Key Projects & Use Cases</h2>
   <div class="projects">
     <div class="card">
-      <h3>Standalone Home</h3>
+      <h3>Agentic AI</h3>
+      <p>AI for grocery stores – predictive inventory, expiry tracking, and personalized shopping experiences.</p>
+    </div>
+    <div class="card">
+      <h3>SituAware Auto</h3>
+      <p>AI-based situational awareness for vehicle safety and smarter autonomous driving decisions.</p>
+    </div>
+    <div class="card">
+      <h3>AI Bootcamp Builder</h3>
+      <p>Design structured bootcamp content and teach real-world AI skills to future cohorts.</p>
+    </div>
+    <div class="card">
+      <h3>Standalone Home Energy</h3>
       <p>Limited to one home’s data and consumption. AI optimization is restricted to owner behavior and solar/battery input.</p>
     </div>
     <div class="card">
-      <h3>VPP-enabled Community</h3>
+      <h3>VPP-enabled Community Energy</h3>
       <p>Aggregated energy management across homes using AI. Enables predictive balancing, community-wide energy savings, and potential grid-level participation.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Key Projects</h2>
   <div class="projects">
     <div class="card">
       <h3>Agentic AI</h3>
@@ -143,7 +153,9 @@ $1
   </div>
 </section>
 
-$1 This residency is located close to Silicon Valley companies, making it a golden launchpad for your AI career. Each resident will receive a certificate of experience from Mayuk.ai upon completion.</p>
+<section>
+  <p>This residency is located close to Silicon Valley companies, making it a golden launchpad for your AI career. Each resident will receive a certificate of experience from Mayuk.ai upon completion.</p>
+</section>
   <form action="https://formspree.io/f/xzzeykkk" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -152,26 +164,21 @@ $1 This residency is located close to Silicon Valley companies, making it a gold
   </form>
 </section>
 
-<!-- Botpress AI House Assistant Chatbot -->
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-    "botId": "bd57d22c-d926-4730-9b80-33548901acc6",
-    "clientId": "6a7430ab-23db-4cc5-834d-e82b0df70f81",
-    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-    "messagingUrl": "https://messaging.botpress.cloud",
-    "botName": "AI House Assistant",
-    "botAvatarUrl": "https://aihousebay.com/assets/aihouse-icon.png",  // optional
-    "stylesheet": "https://cdn.botpress.cloud/webchat/v1/themes/default.css"
-  });
-</script>
-
-    
-  
 <footer>
   <p>&copy; 2025 Mayuk.ai – AI House Residency | Antioch, CA | info@mayukinc.com</p>
 </footer>
 
-  
+<!-- Botpress Chat Widget -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    botId: "bd57d22c-d926-4730-9b80-33548901acc6",
+    clientId: "6a7430ab-23db-4cc5-834d-e82b0df70f81",
+    hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+    messagingUrl: "https://messaging.botpress.cloud",
+    botName: "AI House Assistant",
+    stylesheet: "https://cdn.botpress.cloud/webchat/v1/themes/default.css"
+  });
+</script>
 </body>
 </html>
